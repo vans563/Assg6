@@ -1,0 +1,41 @@
+import java.util.Scanner; 
+public class Freq 
+{ 
+public static void main(String[] args) 
+{	
+Scanner s=new Scanner(System.in); 
+System.out.println("Enter the no of elements you want in your array: ");
+intn=s.nextInt();
+int arr[]=new int[n];	
+int a[]=new int[n];
+System.out.println("Enter the inputs of your array: ");
+for(inti=0;i<n;i++) 
+{	
+arr[i]=s.nextInt();
+a[i]=-1;
+}	
+for(int i=0;i<n;i++) 
+{	
+int count=1;	
+for(int j=i+1;j<n;j++)
+{	
+if(arr[i]==arr[j])
+{
+count++;
+a[j]=0;
+}
+} 
+if(a[i]!=0) 
+{	
+a[i]=count;
+}
+}
+for(int i=0;i<n;i++) 
+{	
+if(a[i]!=0)
+{	
+System.out.println(arr[i]+":"+a[i]);
+}
+}
+}
+}
